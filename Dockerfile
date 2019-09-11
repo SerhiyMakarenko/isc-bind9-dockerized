@@ -17,8 +17,6 @@ RUN apt-get update && \
     apt-get update && \
     apt-get install -y --no-install-recommends --no-install-suggests bind9=1:9.14.5-1+0~20190826.17+debian10~1.gbpeb8685 && \
     apt-get purge -y --auto-remove apt-utils gnupg curl debian-keyring apt-transport-https ca-certificates && \
-    apt-get clean && \
-    apt-get clean autoclean && \
     rm -rf /var/lib/apt/lists/*
 
 EXPOSE 53/udp 53/tcp
