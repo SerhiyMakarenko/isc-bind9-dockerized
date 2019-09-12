@@ -1,4 +1,6 @@
 # General
+[![MIT License](https://img.shields.io/badge/License-MIT-blue.svg?style=flat)](https://github.com/SerhiyMakarenko/isc-bind9-dockerized/blob/isc-bind9/stable/LICENSE)
+
 The Berkeley Internet Name Domain (BIND 9) implements an Internet domain name server. BIND 9 is the most widely-used name server software on the Internet, and is supported by the [Internet Software Consortium](www.isc.org).
 
 This container provides the dockerized Internet Name Domain (BIND 9) implements an Internet domain name server using ISC maintained packages to compensate lag behind official ISC releases for Debian 10 (Buster).
