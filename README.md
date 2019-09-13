@@ -8,7 +8,7 @@ This container provides the dockerized Internet Name Domain (BIND 9) implements 
 # Usage
 To run container you need to execute command listed below:
 ```
-docker run -d --name bind9-server --net=host \
+docker run -d --name isc-bind9-dns-server --net=host \
     -v /path/to/named.conf:/etc/bind/named.conf \
     -v /path/to/exemple.com.db:/etc/bind/exemple.com.db \
     serhiymakarenko/isc-bind9-dns-server:latest

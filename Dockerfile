@@ -16,6 +16,7 @@ RUN apt-get update && \
     curl -1sLf 'https://dl.cloudsmith.io/public/isc/bind/cfg/setup/config.deb.txt?distro=debian&codename=buster' > /etc/apt/sources.list.d/isc-bind.list && \
     apt-get update && \
     apt-get install -y --no-install-recommends --no-install-suggests bind9=1:9.14.5-1+0~20190826.17+debian10~1.gbpeb8685 && \
+    chown -R bind:bind /etc/bind && \
     apt-get purge -y --auto-remove apt-utils gnupg curl debian-keyring apt-transport-https ca-certificates && \
     rm -rf /var/lib/apt/lists/*
 
