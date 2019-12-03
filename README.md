@@ -15,5 +15,5 @@ docker run -d --name isc-bind9-dns-server --net=host \
 ```
 
 # Related
-- [Debian Repository Setup for BIND9](https://cloudsmith.io/~ondrej-sury/repos/public-bind/setup/#formats-deb);
-- [BIND9 packages maintened by ISC](https://cloudsmith.io/~ondrej-sury/repos/public-bind/packages/?q=format%3Adeb).
+- [Debian Repository Setup for BIND9](https://bind.debian.net/bind/README.txt);
+- [BIND9 packages maintened by ISC](https://bind.debian.net/bind/).

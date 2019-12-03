@@ -12,10 +12,10 @@ ENV APT_KEY_DONT_WARN_ON_DANGEROUS_USAGE=DontWarn
 RUN apt-get update && \
     apt-get install -y --no-install-recommends --no-install-suggests \
     apt-utils gnupg curl debian-keyring apt-transport-https ca-certificates && \
-    curl -1sLf 'https://dl.cloudsmith.io/public/ondrej-sury/public-bind/cfg/gpg/gpg.3C6A2C947E5E6D2E.key' | apt-key add - && \
-    curl -1sLf 'https://dl.cloudsmith.io/public/ondrej-sury/public-bind/cfg/setup/config.deb.txt?distro=debian&codename=buster' > /etc/apt/sources.list.d/isc-bind.list && \
+    curl -1sLf 'https://packages.sury.org/bind/apt.gpg' | apt-key add - && \
+    echo 'deb https://packages.sury.org/bind/ buster main' > /etc/apt/sources.list.d/isc-bind.list && \
     apt-get update && \
-    apt-get install -y --no-install-recommends --no-install-suggests bind9=1:9.14.6-1+0~20190923.18+debian10~1.gbp7f43d0 && \
+    apt-get install -y --no-install-recommends --no-install-suggests bind9=1:9.14.8-1+0~20191120.20+debian10~1.gbp0f2a41 && \
     chown -R bind:bind /etc/bind && \
     apt-get purge -y --auto-remove apt-utils gnupg curl debian-keyring apt-transport-https ca-certificates && \
     rm -rf /var/lib/apt/lists/*
