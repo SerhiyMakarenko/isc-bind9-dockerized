@@ -12,6 +12,7 @@ ENV APT_KEY_DONT_WARN_ON_DANGEROUS_USAGE=DontWarn
 RUN apt-get update && \
     apt-get install -y --no-install-recommends --no-install-suggests \
     apt-utils gnupg curl debian-keyring apt-transport-https ca-certificates && \
+    apt-get install -y --reinstall ca-certificates && \
     curl -1sLf 'https://packages.sury.org/bind/apt.gpg' | apt-key add - && \
     echo 'deb https://packages.sury.org/bind/ buster main' > /etc/apt/sources.list.d/isc-bind.list && \
     apt-get update && \
