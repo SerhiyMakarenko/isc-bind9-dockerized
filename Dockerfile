@@ -16,7 +16,7 @@ RUN apt-get update && \
     curl -1sLf 'https://packages.sury.org/bind/apt.gpg' | apt-key add - && \
     echo 'deb https://packages.sury.org/bind/ buster main' > /etc/apt/sources.list.d/isc-bind.list && \
     apt-get update && \
-    apt-get install -y --no-install-recommends --no-install-suggests bind9=1:9.14.11-1+0~20200220.23+debian10~1.gbpfad381 && \
+    apt-get install -y --no-install-recommends --no-install-suggests bind9=1:9.16.1-1+0~20200320.24+debian10~1.gbp63a364 && \
     chown -R bind:bind /etc/bind && \
     apt-get purge -y --auto-remove apt-utils gnupg curl debian-keyring apt-transport-https ca-certificates && \
     rm -rf /var/lib/apt/lists/*
